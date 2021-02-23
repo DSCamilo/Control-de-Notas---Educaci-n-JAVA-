@@ -1,5 +1,5 @@
 
-package controlNotas;
+package modelo;
 
 
 public class Carnet {
