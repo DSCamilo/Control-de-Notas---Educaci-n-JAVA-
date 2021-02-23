@@ -27,11 +27,12 @@ public class Estudiante {
     
     
     public String consultarNotas (String Codigo){
+        String valor ="";
         
         
         
         
-       
+       return valor;
     }
     
 }
