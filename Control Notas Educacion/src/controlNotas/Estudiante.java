@@ -1,14 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controlNotas;
 
-/**
- *
- * @author riasc
- */
+
 public class Estudiante {
+    
+    
+    private String codigoEstudiante;
+    private int fechaNacimiento;
+
+    public String getCodigoEstudiante() {
+        return codigoEstudiante;
+    }
+
+    public void setCodigoEstudiante(String codigoEstudiante) {
+        this.codigoEstudiante = codigoEstudiante;
+    }
+
+    public int getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(int fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    
+    
+    
+    public String consultarNotas (String Codigo){
+        
+        
+        
+        
+       
+    }
     
 }
