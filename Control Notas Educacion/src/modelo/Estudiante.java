@@ -15,7 +15,10 @@ public class Estudiante extends Persona {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Estudiante(String codigoEstudiante, int fechaNacimiento, Acudiente acudiente, Carnet carnet) {
+    public Estudiante( 
+            String codigoEstudiante, int fechaNacimiento, 
+            Acudiente acudiente, Carnet carnet) {
+        
         this.codigoEstudiante = codigoEstudiante;
         this.fechaNacimiento = fechaNacimiento;
         this.acudiente = acudiente;

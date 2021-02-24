@@ -9,7 +9,7 @@ public class Persona {
     private String apellido;
     private int telefono;
     private String correoElectronico;
-    
+
 
     public String getNombre() {
         return nombre;
