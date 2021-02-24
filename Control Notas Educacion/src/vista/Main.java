@@ -34,5 +34,7 @@ public class Main {
         estudiante1.consultarNota();
 
         
+        System.out.println("al camilo le gusta el pito ");
+        
     }
 }
