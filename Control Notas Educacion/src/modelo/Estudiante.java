@@ -2,25 +2,23 @@ package modelo;
 
 import java.util.ArrayList;
 
-
 public class Estudiante extends Persona implements MenuConsulta {
-    
-    
+
     private String codigoEstudiante;
     private String fechaNacimiento;
     private Acudiente acudiente;
     private Carnet carnet;
-    private ArrayList AsignaturaExtracirricular;
+    private ArrayList<AsignaturaExtra> asignaturas;
 
     public Estudiante(String codigoEstudiante, String fechaNacimiento) {
         this.codigoEstudiante = codigoEstudiante;
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Estudiante( 
-            String codigoEstudiante, String fechaNacimiento, 
+    public Estudiante(
+            String codigoEstudiante, String fechaNacimiento,
             Acudiente acudiente, Carnet carnet) {
-        
+
         this.codigoEstudiante = codigoEstudiante;
         this.fechaNacimiento = fechaNacimiento;
         this.acudiente = acudiente;
@@ -59,11 +57,26 @@ public class Estudiante extends Persona implements MenuConsulta {
         this.carnet = carnet;
     }
 
-    @Override
-    public void consultarNota() {
-        Estudiante estudiante = new Estudiante("123", "123");
-        
+    public ArrayList<AsignaturaExtra> getAsignaturas() {
+        return asignaturas;
+    }
+
+    public void setAsignaturas(ArrayList<AsignaturaExtra> asignaturas) {
+        this.asignaturas = asignaturas;
     }
     
     
+
+    
+    public void consultarNota() {
+        
+        
+        for (int i = 0; i < asignaturas.size(); i++) {
+            System.out.println("Materia: " + asignaturas.get(i).getNombreAsignatura()
+                    + " Promedio: " + asignaturas.get(i).getPromedio());
+
+        }
+
+    }
+
 }
