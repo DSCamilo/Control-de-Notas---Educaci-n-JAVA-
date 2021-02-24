@@ -9,7 +9,6 @@ package modelo;
  *
  * @author sagov8
  */
-public interface Login {
-    public void iniciarSesion();
-    public void registrarUsuario();
+public interface MenuConsulta {
+    public void consultarNota();
 }

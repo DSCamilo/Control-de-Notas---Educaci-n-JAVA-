@@ -2,7 +2,7 @@
 package modelo;
 
 
-public class Acudiente extends Persona {
+public class Acudiente extends Persona implements MenuConsulta{
     
     
    private String codigoAcudiente;
@@ -26,5 +26,10 @@ public class Acudiente extends Persona {
     
     public void ConsultarNotas(){
         
+    }
+
+    @Override
+    public void consultarNota() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
