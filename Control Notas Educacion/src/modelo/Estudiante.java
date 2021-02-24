@@ -1,5 +1,6 @@
-
 package modelo;
+
+import java.util.ArrayList;
 
 
 public class Estudiante extends Persona implements MenuConsulta {
@@ -9,6 +10,7 @@ public class Estudiante extends Persona implements MenuConsulta {
     private String fechaNacimiento;
     private Acudiente acudiente;
     private Carnet carnet;
+    private ArrayList AsignaturaExtracirricular;
 
     public Estudiante(String codigoEstudiante, String fechaNacimiento) {
         this.codigoEstudiante = codigoEstudiante;
@@ -55,17 +57,6 @@ public class Estudiante extends Persona implements MenuConsulta {
 
     public void setCarnet(Carnet carnet) {
         this.carnet = carnet;
-    }
-    
-    
-    
-    public String consultarNotas (String nombreMateria){
-        String valor ="";
-        
-        
-        
-        
-       return valor;
     }
 
     @Override
