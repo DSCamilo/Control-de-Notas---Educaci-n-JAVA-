@@ -30,6 +30,7 @@ public class Acudiente extends Persona implements MenuConsulta{
 
     @Override
     public void consultarNota() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Materia: " + asignaturas.get(i).getNombreAsignatura()
+                    + " Promedio: " + asignaturas.get(i).getPromedio());
     }
 }
