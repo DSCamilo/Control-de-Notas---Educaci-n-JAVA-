@@ -58,7 +58,11 @@ public class Estudiante extends Persona implements MenuConsulta {
     public void setCarnet(Carnet carnet) {
         this.carnet = carnet;
     }
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
     @Override
     public void consultarNota() {
         Estudiante estudiante = new Estudiante("123", "123");
