@@ -9,7 +9,6 @@ public class Estudiante extends Persona implements MenuConsulta {
     private String fechaNacimiento;
     private Acudiente acudiente;
     private Carnet carnet;
-    private String password;
 
     public Estudiante(String codigoEstudiante, String fechaNacimiento) {
         this.codigoEstudiante = codigoEstudiante;
@@ -57,15 +56,6 @@ public class Estudiante extends Persona implements MenuConsulta {
     public void setCarnet(Carnet carnet) {
         this.carnet = carnet;
     }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    
     
     
     
@@ -80,7 +70,8 @@ public class Estudiante extends Persona implements MenuConsulta {
 
     @Override
     public void consultarNota() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Estudiante estudiante = new Estudiante("123", "123");
+        
     }
     
     
