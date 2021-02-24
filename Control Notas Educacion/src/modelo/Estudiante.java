@@ -1,6 +1,8 @@
 
 package modelo;
 
+import java.util.ArrayList;
+
 
 public class Estudiante extends Persona implements MenuConsulta {
     
@@ -10,6 +12,8 @@ public class Estudiante extends Persona implements MenuConsulta {
     private Acudiente acudiente;
     private Carnet carnet;
     private String password;
+    private ArrayList AsignaturaExtracirricular;
+
 
     public Estudiante(String codigoEstudiante, String fechaNacimiento) {
         this.codigoEstudiante = codigoEstudiante;
