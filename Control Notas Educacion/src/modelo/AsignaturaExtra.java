@@ -1,28 +1,27 @@
 package modelo;
 
-
 import java.util.ArrayList;
 
 /**
  *
  * @author sagov8
  */
-public class AsignaturaExtracurricular {
-   
+public class AsignaturaExtra {
+
     private String codigoMateria;
     private String nombreAsignatura;
     private ArrayList notas;
-    private float promedio;
+    private double promedio;
 
-    public AsignaturaExtracurricular(String codigoMateria, String nombreAsignatura, ArrayList notas, float promedio) {
+    public AsignaturaExtra(String codigoMateria, String nombreAsignatura, ArrayList notas, float promedio) {
         this.codigoMateria = codigoMateria;
         this.nombreAsignatura = nombreAsignatura;
         this.notas = notas;
         this.promedio = promedio;
     }
 
-    public AsignaturaExtracurricular() {
-    
+    public AsignaturaExtra() {
+
     }
 
     public String getCodigoMateria() {
@@ -49,13 +48,25 @@ public class AsignaturaExtracurricular {
         this.notas = notas;
     }
 
-    public float getPromedio() {
+    public double getPromedio() {
         return promedio;
     }
 
-    public void setPromedio(float promedio) {
+    public void setPromedio(double promedio) {
         this.promedio = promedio;
     }
 
-    
+    public double calcularPromedio(ArrayList<Double> notas) {
+
+        double sumatoria = 0;
+
+        for (int i = 0; i < notas.size(); i++) {
+
+            sumatoria += notas.get(i);
+
+        }
+
+        return sumatoria / notas.size() - 1;
+    }
+
 }

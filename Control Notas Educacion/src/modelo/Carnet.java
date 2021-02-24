@@ -1,15 +1,14 @@
-
 package modelo;
 
-
 public class Carnet {
-    
-    
+
     private String identificacionEstudiante;
     private String sexo;
-    private String fotoEstudiante;
     private String tipoSangre;
     private String fechaVencimiento;
+
+    public Carnet() {
+    }
 
     public String getIdentificacionEstudiante() {
         return identificacionEstudiante;
@@ -27,14 +26,6 @@ public class Carnet {
         this.sexo = sexo;
     }
 
-    public String getFotoEstudiante() {
-        return fotoEstudiante;
-    }
-
-    public void setFotoEstudiante(String fotoEstudiante) {
-        this.fotoEstudiante = fotoEstudiante;
-    }
-
     public String getTipoSangre() {
         return tipoSangre;
     }
@@ -50,8 +41,5 @@ public class Carnet {
     public void setFechaVencimiento(String fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
     }
-    
-    
-    
- 
+
 }
