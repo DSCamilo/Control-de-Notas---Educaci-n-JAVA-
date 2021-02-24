@@ -7,6 +7,20 @@ public class Estudiante extends Persona {
     
     private String codigoEstudiante;
     private int fechaNacimiento;
+    private Acudiente acudiente;
+    private Carnet carnet;
+
+    public Estudiante(String codigoEstudiante, int fechaNacimiento) {
+        this.codigoEstudiante = codigoEstudiante;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Estudiante(String codigoEstudiante, int fechaNacimiento, Acudiente acudiente, Carnet carnet) {
+        this.codigoEstudiante = codigoEstudiante;
+        this.fechaNacimiento = fechaNacimiento;
+        this.acudiente = acudiente;
+        this.carnet = carnet;
+    }
 
     public String getCodigoEstudiante() {
         return codigoEstudiante;
@@ -26,7 +40,7 @@ public class Estudiante extends Persona {
     
     
     
-    public String consultarNotas (String Codigo){
+    public String consultarNotas (String nombreMateria){
         String valor ="";
         
         
