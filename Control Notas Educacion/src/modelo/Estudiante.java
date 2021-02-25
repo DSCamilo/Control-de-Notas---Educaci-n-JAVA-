@@ -12,6 +12,7 @@ public class Estudiante extends Persona implements MenuConsulta {
     public Estudiante(String codigoEstudiante, String fechaNacimiento) {
         this.codigoEstudiante = codigoEstudiante;
         this.fechaNacimiento = fechaNacimiento;
+        ArrayList<AsignaturaExtra> asignaturas;
     }
     
     //Asociacion
@@ -20,7 +21,9 @@ public class Estudiante extends Persona implements MenuConsulta {
     
     //Agregación
     public void agregarMateriaExtra(AsignaturaExtra asignatura){
+    
         asignaturas.add(asignatura);
+        
     }
     
     //Composición
