@@ -7,9 +7,6 @@ public class Carnet {
     private String tipoSangre;
     private String fechaVencimiento;
 
-    public Carnet() {
-    }
-
     public String getIdentificacionEstudiante() {
         return identificacionEstudiante;
     }
