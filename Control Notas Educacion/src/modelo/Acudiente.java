@@ -1,15 +1,20 @@
 
 package modelo;
 
+import java.util.Scanner;
+
 
 public class Acudiente extends Persona implements MenuConsulta{
     
     
    private String codigoAcudiente;
+   private Estudiante estudiante;
    
-    public Acudiente(String codigoAcudiente) {
+   //Asociación
+    public Acudiente(String codigoAcudiente, Estudiante estudiante) {
         
         this.codigoAcudiente = codigoAcudiente;
+        this.estudiante = estudiante;
     }
 
     public Acudiente() {
@@ -23,13 +28,15 @@ public class Acudiente extends Persona implements MenuConsulta{
     public void setCodigoAcudiente(String codigoAcudiente) {
         this.codigoAcudiente = codigoAcudiente;
     } 
-    
-    public void ConsultarNotas(){
-        
-    }
 
     @Override
     public void consultarNota() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+
+        for(int i = 0 ; i < estudiante.getAsignaturas().size(); i++){
+            System.out.println("Materia: " );
+        }
+        
+
     }
 }

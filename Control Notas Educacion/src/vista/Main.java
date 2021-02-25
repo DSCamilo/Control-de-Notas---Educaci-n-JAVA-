@@ -11,8 +11,9 @@ public class Main {
     public static void main(String[] args) {
 
         Carnet carnet1 = new Carnet();
-        Acudiente acudiante1 = new Acudiente("123");
-        Estudiante estudiante1 = new Estudiante("001", "03/01/2001", acudiante1, carnet1);
+        
+        
+        Estudiante estudiante1 = new Estudiante("001", "03/01/2001");
 
         estudiante1.setNombre("Magnolia");
         estudiante1.setApellido("Pajarin");
@@ -30,8 +31,17 @@ public class Main {
         ArrayList<AsignaturaExtra> asignaturas=new ArrayList<>();
         asignaturas.add(asignatura1);
         
-        estudiante1.setAsignaturas(asignaturas);
-        estudiante1.consultarNota();
+        Acudiente acudiente1 = new Acudiente("123", estudiante1);
+        acudiente1.setNombre("Patricia");
+        acudiente1.setApellido("Pérez");
+        
+        System.out.println("Bienvenido al sistema de control de notas +"
+                + "\n¿Es usted acudiente? Marque 1 +"
+                + "\n¿Es usted estudiante? Marque 2");
+        System.out.println("El acudiente del estudiante " + estudiante1.getNombre() + " es " +
+                "s");
+        
+        
 
         
         System.out.println("al camilo le gusta el pito ");
