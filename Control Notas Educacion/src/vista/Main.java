@@ -1,6 +1,7 @@
 package vista;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import modelo.Acudiente;
 import modelo.AsignaturaExtra;
 import modelo.Carnet;
@@ -9,7 +10,7 @@ import modelo.Estudiante;
 public class Main {
 
     public static void main(String[] args) {
-
+        Scanner t = new Scanner (System.in);
         Carnet carnet1 = new Carnet();
         
         
@@ -35,16 +36,35 @@ public class Main {
         acudiente1.setNombre("Patricia");
         acudiente1.setApellido("Pérez");
         
+        int ingreso=0;
+        String codestu="";
+        Estudiante objestu=new Estudiante();
         System.out.println("Bienvenido al sistema de control de notas +"
                 + "\n¿Es usted acudiente? Marque 1 +"
                 + "\n¿Es usted estudiante? Marque 2");
-        System.out.println("El acudiente del estudiante " + estudiante1.getNombre() + " es " +
-                "s");
+       // System.out.println("El acudiente del estudiante " + estudiante1.getNombre() + " es " +
+       //         "s");
+        
+        ingreso=t.nextInt();
         
         
+        if (ingreso==1) {
+            System.out.println(" Ingrese codigo de estudiante ");
+                    codestu=t.next();
+                if (codestu.equals(objestu.getCodigoEstudiante())) {
+                    objestu.consultarNota();
+                        
+            }else{
+                    System.out.println("Codigo no valido");
+                }
+            
+        }if (ingreso==2) {
+            
+            
+        }
 
         
-        System.out.println("al camilo le gusta el pito ");
+    //    System.out.println("al camilo le gusta el pito ");
         
     }
 }
