@@ -34,7 +34,9 @@ public class Acudiente extends Persona implements MenuConsulta{
 
 
         for(int i = 0 ; i < estudiante.getAsignaturas().size(); i++){
-            System.out.println("Materia: " );
+            System.out.println("\nMateria: " + 
+                    estudiante.getAsignaturas().get(i).getNombreAsignatura() +
+                    "\nNota: " + estudiante.getAsignaturas().get(i).getPromedio());
         }
         
 

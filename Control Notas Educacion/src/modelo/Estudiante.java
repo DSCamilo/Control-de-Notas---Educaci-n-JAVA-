@@ -71,9 +71,9 @@ public class Estudiante extends Persona implements MenuConsulta {
     public void consultarNota() {
         
         for (int i = 0; i < asignaturas.size(); i++) {
-            System.out.println("Materia: " + asignaturas.get(i).getNombreAsignatura()
-                    + " Promedio: " + asignaturas.get(i).getPromedio());
-
+            System.out.println("\nMateria: " + asignaturas.get(i).getNombreAsignatura()
+                    + "\nNotas" + asignaturas.get(i).getNotas().toString()+
+                    "\nPromedio: " + asignaturas.get(i).getPromedio());
         }
 
     }
