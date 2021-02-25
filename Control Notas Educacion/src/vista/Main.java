@@ -88,6 +88,7 @@ public class Main {
                         System.out.println("\n" + estudiante1.getCarnet());
 
                     }
+                    break;
 
                 default:
                     System.out.println("Seleccione una opción correcta");
