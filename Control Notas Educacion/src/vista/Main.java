@@ -54,8 +54,8 @@ public class Main {
             acudiente1.consultarNota();
 
         } else if (ingreso == 2) {
-            System.out.println(" Ingrese una opcion \n" + "Consultar notas  = 1\n" +
-                    " Agregar materia = 2\n" + "Modificar info carnet = 3");
+            System.out.println(" Ingrese una opcion \n" + "Consultar notas  = 1\n"
+                    + " Agregar materia = 2\n" + "Modificar info carnet = 3");
             opcion = t.nextInt();
 
             switch (opcion) {
@@ -84,7 +84,9 @@ public class Main {
                         System.out.println("\n\nNombre modificado");
                         System.out.println("\n" + estudiante1.getCarnet());
                     }
-
+                break;
+                default:
+                    System.out.println("opcion incorrecta");
             }
 
         }
