@@ -86,8 +86,11 @@ public class Main {
                         estudiante1.getCarnet().setNombreEstudiante(t.nextLine());
                         System.out.println("\n\nNombre modificado");
                         System.out.println("\n" + estudiante1.getCarnet());
+
                     }
 
+                default:
+                    System.out.println("Seleccione una opción correcta");
             }
 
         }
