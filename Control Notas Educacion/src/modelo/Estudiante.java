@@ -35,6 +35,9 @@ public class Estudiante extends Persona implements MenuConsulta {
         carnet.setSexo(sexo);
         carnet.setTipoSangre(tipoSangre);
         carnet.setFechaVencimiento(fechaVencimiento);
+        carnet.setNombreEstudiante(Estudiante.super.getNombre() + " " +
+                Estudiante.super.getApellido());
+        this.carnet = carnet;
     }
     
     //Getter y Setter
