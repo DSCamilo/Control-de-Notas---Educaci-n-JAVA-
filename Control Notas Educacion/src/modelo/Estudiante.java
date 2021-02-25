@@ -6,7 +6,6 @@ public class Estudiante extends Persona implements MenuConsulta {
 
     private String codigoEstudiante;
     private String fechaNacimiento;
-    private Acudiente acudiente;
     private Carnet carnet;
     private ArrayList<AsignaturaExtra> asignaturas;
 
@@ -14,17 +13,28 @@ public class Estudiante extends Persona implements MenuConsulta {
         this.codigoEstudiante = codigoEstudiante;
         this.fechaNacimiento = fechaNacimiento;
     }
-
-    public Estudiante(
-            String codigoEstudiante, String fechaNacimiento,
-            Acudiente acudiente, Carnet carnet) {
-
-        this.codigoEstudiante = codigoEstudiante;
-        this.fechaNacimiento = fechaNacimiento;
-        this.acudiente = acudiente;
-        this.carnet = carnet;
+    
+    //Asociacion
+    public Estudiante() {
     }
-
+    
+    //Agregación
+    public void agregarMateriaExtra(AsignaturaExtra asignatura){
+        asignaturas.add(asignatura);
+    }
+    
+    //Composición
+    public void crearCarnet(String idEstudiante, String sexo, String tipoSangre,
+            String fechaVencimiento){
+        
+        Carnet carnet = new Carnet();
+        carnet.setIdentificacionEstudiante(idEstudiante);
+        carnet.setSexo(sexo);
+        carnet.setTipoSangre(tipoSangre);
+        carnet.setFechaVencimiento(fechaVencimiento);
+    }
+    
+    //Getter y Setter
     public String getCodigoEstudiante() {
         return codigoEstudiante;
     }
@@ -39,14 +49,6 @@ public class Estudiante extends Persona implements MenuConsulta {
 
     public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
-    }
-
-    public Acudiente getAcudiente() {
-        return acudiente;
-    }
-
-    public void setAcudiente(Acudiente acudiente) {
-        this.acudiente = acudiente;
     }
 
     public Carnet getCarnet() {
@@ -64,12 +66,9 @@ public class Estudiante extends Persona implements MenuConsulta {
     public void setAsignaturas(ArrayList<AsignaturaExtra> asignaturas) {
         this.asignaturas = asignaturas;
     }
-    
-    
-
-    
+ 
+    //interfaz
     public void consultarNota() {
-        
         
         for (int i = 0; i < asignaturas.size(); i++) {
             System.out.println("Materia: " + asignaturas.get(i).getNombreAsignatura()
