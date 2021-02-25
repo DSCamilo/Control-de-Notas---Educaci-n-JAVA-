@@ -12,6 +12,7 @@ public class Estudiante extends Persona implements MenuConsulta {
     public Estudiante(String codigoEstudiante, String fechaNacimiento) {
         this.codigoEstudiante = codigoEstudiante;
         this.fechaNacimiento = fechaNacimiento;
+        ArrayList<AsignaturaExtra> asignaturas;
     }
     
     //Asociacion
@@ -20,7 +21,9 @@ public class Estudiante extends Persona implements MenuConsulta {
     
     //Agregación
     public void agregarMateriaExtra(AsignaturaExtra asignatura){
+    
         asignaturas.add(asignatura);
+        
     }
     
     //Composición
@@ -32,6 +35,9 @@ public class Estudiante extends Persona implements MenuConsulta {
         carnet.setSexo(sexo);
         carnet.setTipoSangre(tipoSangre);
         carnet.setFechaVencimiento(fechaVencimiento);
+        carnet.setNombreEstudiante(Estudiante.super.getNombre() + " " +
+                Estudiante.super.getApellido());
+        this.carnet = carnet;
     }
     
     //Getter y Setter
@@ -71,9 +77,9 @@ public class Estudiante extends Persona implements MenuConsulta {
     public void consultarNota() {
         
         for (int i = 0; i < asignaturas.size(); i++) {
-            System.out.println("Materia: " + asignaturas.get(i).getNombreAsignatura()
-                    + " Promedio: " + asignaturas.get(i).getPromedio());
-
+            System.out.println("\nMateria: " + asignaturas.get(i).getNombreAsignatura()
+                    + "\nNotas" + asignaturas.get(i).getNotas().toString()+
+                    "\nPromedio: " + asignaturas.get(i).getPromedio());
         }
 
     }

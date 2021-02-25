@@ -66,7 +66,14 @@ public class AsignaturaExtra {
 
         }
 
-        return sumatoria / notas.size() - 1;
+        return Math.round((sumatoria / notas.size() - 1)*100.0)/100.0;
     }
+
+    @Override
+    public String toString() {
+        return "AsignaturaExtra{" + "codigoMateria=" + codigoMateria + ", nombreAsignatura=" + nombreAsignatura + ", notas=" + notas + ", promedio=" + promedio + '}';
+    }
+    
+    
 
 }

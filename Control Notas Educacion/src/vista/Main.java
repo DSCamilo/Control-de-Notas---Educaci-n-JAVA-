@@ -12,12 +12,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner t = new Scanner(System.in);
 
+
         Carnet carnet1 = new Carnet();
+
 
         Estudiante estudiante1 = new Estudiante("001", "03/01/2001");
 
         estudiante1.setNombre("Magnolia");
         estudiante1.setApellido("Pajarin");
+        estudiante1.crearCarnet("0001", "M", "O+", "02/06/2021");
 
         ArrayList<Double> notasEstudiante = new ArrayList<>();
 
@@ -30,39 +33,69 @@ public class Main {
         asignatura1.setPromedio(asignatura1.calcularPromedio(notasEstudiante));
 
         ArrayList<AsignaturaExtra> asignaturas = new ArrayList<>();
+
         asignaturas.add(asignatura1);
+
+        estudiante1.setAsignaturas(asignaturas);
+        estudiante1.agregarMateriaExtra(asignatura1);
+
 
         Acudiente acudiente1 = new Acudiente("123", estudiante1);
         acudiente1.setNombre("Patricia");
         acudiente1.setApellido("Pérez");
 
-        System.out.println("▓▓Bienvenido al sistema de control de notas▓▓"
+
+
+        int ingreso = 0;
+        String codestu = "";
+        int opcion = 0;
+        String materiaingreso = "";
+        Estudiante objestu = new Estudiante();
+        System.out.println("Bienvenido al sistema de control de notas "
                 + "\n¿Es usted acudiente? Marque 1 "
                 + "\n¿Es usted estudiante? Marque 2");
+        // System.out.println("El acudiente del estudiante " + estudiante1.getNombre() + " es " +
+        //         "s");
 
-        int opcionUsuario;
+        ingreso = t.nextInt();
 
-        opcionUsuario = t.nextInt();
+        if (ingreso == 1) {
+            System.out.println("\nLas notas del estudiante " + acudiente1.getNombre() + " son:");
+            acudiente1.consultarNota();
 
-        if (opcionUsuario == 1) {
-            System.out.println("░░Bienvenido al sistema de Notas░░");
-            System.out.println("");
-            System.out.println("Opciones del Sistema, que opcion desea realizar");
-            System.out.println("1. Consultar notas");
-            
-  
-      
+        } else if (ingreso == 2) {
+            System.out.println(" Ingrese una opcion \n" + "Consultar notas  = 1\n" +
+                    " Agregar materia = 2\n" + "Modificar info carnet = 3");
+            opcion = t.nextInt();
 
-        } else if (opcionUsuario==2) {
-            System.out.println("░░Bienvenido al sistema de Notas░░"+""+estudiante1.getNombre());
-            System.out.println("");
-            System.out.println("Opciones del Sistema, que opcion desea realizar");
-            System.out.println("1. Agregar Asiganatura");
-            System.out.println("2. Consultar Notas");
+            switch (opcion) {
+                case 1:
+                    estudiante1.consultarNota();
+                    break;
+                case 2:
+                    System.out.println("Ingrese nombre materia ");
+                    materiaingreso = t.next();
 
-        } else {
+                    AsignaturaExtra asig = new AsignaturaExtra();
 
-            System.out.println("║Utilice una opcion valida║");
+                    asig.setNombreAsignatura(materiaingreso);
+                    asig.setCodigoMateria("003");
+                    estudiante1.agregarMateriaExtra(asig);
+                    System.out.println("Materias matriculadas : " + estudiante1.getAsignaturas().toString());
+                    break;
+                case 3:
+                    System.out.println("" + estudiante1.getCarnet());
+                    System.out.println("\nDesea modificar el nombre (1: Si, 2: NO):");
+                    int eleccion = t.nextInt();
+                    if (eleccion == 1) {
+                        t.nextLine();
+                        System.out.println("\nIngrese el nuevo nombre: ");
+                        estudiante1.getCarnet().setNombreEstudiante(t.nextLine());
+                        System.out.println("\n\nNombre modificado");
+                        System.out.println("\n" + estudiante1.getCarnet());
+                    }
+
+            }
 
         }
 

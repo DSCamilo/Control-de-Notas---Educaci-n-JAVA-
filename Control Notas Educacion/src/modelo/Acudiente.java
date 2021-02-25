@@ -28,13 +28,16 @@ public class Acudiente extends Persona implements MenuConsulta{
     public void setCodigoAcudiente(String codigoAcudiente) {
         this.codigoAcudiente = codigoAcudiente;
     } 
-
+    
+    //Interfaz
     @Override
     public void consultarNota() {
 
 
         for(int i = 0 ; i < estudiante.getAsignaturas().size(); i++){
-            System.out.println("Materia: " );
+            System.out.println("\nMateria: " + 
+                    estudiante.getAsignaturas().get(i).getNombreAsignatura() +
+                    "\nNota: " + estudiante.getAsignaturas().get(i).getPromedio());
         }
         
 
