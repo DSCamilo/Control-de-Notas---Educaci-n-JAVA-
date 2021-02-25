@@ -12,9 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner t = new Scanner(System.in);
 
-
         Carnet carnet1 = new Carnet();
-
 
         Estudiante estudiante1 = new Estudiante("001", "03/01/2001");
 
@@ -39,12 +37,9 @@ public class Main {
         estudiante1.setAsignaturas(asignaturas);
         estudiante1.agregarMateriaExtra(asignatura1);
 
-
         Acudiente acudiente1 = new Acudiente("123", estudiante1);
         acudiente1.setNombre("Patricia");
         acudiente1.setApellido("Pérez");
-
-
 
         int ingreso = 0;
         String codestu = "";
@@ -54,8 +49,6 @@ public class Main {
         System.out.println("Bienvenido al sistema de control de notas "
                 + "\n¿Es usted acudiente? Marque 1 "
                 + "\n¿Es usted estudiante? Marque 2");
-        // System.out.println("El acudiente del estudiante " + estudiante1.getNombre() + " es " +
-        //         "s");
 
         ingreso = t.nextInt();
 
@@ -64,8 +57,8 @@ public class Main {
             acudiente1.consultarNota();
 
         } else if (ingreso == 2) {
-            System.out.println(" Ingrese una opcion \n" + "Consultar notas  = 1\n" +
-                    " Agregar materia = 2\n" + "Modificar info carnet = 3");
+            System.out.println(" Ingrese una opcion \n" + "Consultar notas  = 1\n"
+                    + " Agregar materia = 2\n" + "Modificar info carnet = 3");
             opcion = t.nextInt();
 
             switch (opcion) {
